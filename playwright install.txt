@@ -1,0 +1,134 @@
+Microsoft Windows [Version 10.0.22631.4460]
+(c) Microsoft Corporation. All rights reserved.
+
+H:\Hamada Personal\Cources\Automation Projects\Playwright>npm init playwright@latest
+Need to install the following packages:
+create-playwright@1.17.134
+Ok to proceed? (y) y
+
+
+> npx
+> create-playwright
+
+Getting started with writing end-to-end tests with Playwright:
+Initializing project in '.'
+√ Do you want to use TypeScript or JavaScript? · TypeScript
+√ Where to put your end-to-end tests? · tests
+√ Add a GitHub Actions workflow? (y/N) · true
+√ Install Playwright browsers (can be done manually via 'npx playwright install')? (Y/n) · true
+Initializing NPM project (npm init -y)…
+Wrote to H:\Hamada Personal\Cources\Automation Projects\Playwright\package.json:
+
+{
+  "name": "playwright",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
+
+
+
+Installing Playwright Test (npm install --save-dev @playwright/test)…
+
+added 3 packages, and audited 4 packages in 9s
+
+found 0 vulnerabilities
+Installing Types (npm install --save-dev @types/node)…
+
+added 2 packages, and audited 6 packages in 3s
+
+found 0 vulnerabilities
+Writing playwright.config.ts.
+Writing .github\workflows\playwright.yml.
+Writing tests\example.spec.ts.
+Writing tests-examples\demo-todo-app.spec.ts.
+Writing package.json.
+Downloading browsers (npx playwright install)…
+Downloading Chromium 131.0.6778.33 (playwright build v1148) from https://playwright.azureedge.net/builds/chromium/1148/chromium-win64.zip
+136.9 MiB [====================] 100% 0.0s
+Chromium 131.0.6778.33 (playwright build v1148) downloaded to C:\Users\hashour\AppData\Local\ms-playwright\chromium-1148
+Downloading Chromium Headless Shell 131.0.6778.33 (playwright build v1148) from https://playwright.azureedge.net/builds/chromium/1148/chromium-headless-shell-win64.zip
+87.7 MiB [====================] 100% 0.0s
+Chromium Headless Shell 131.0.6778.33 (playwright build v1148) downloaded to C:\Users\hashour\AppData\Local\ms-playwright\chromium_headless_shell-1148
+Downloading Firefox 132.0 (playwright build v1466) from https://playwright.azureedge.net/builds/firefox/1466/firefox-win64.zip
+85.8 MiB [====================] 100% 0.0s
+Firefox 132.0 (playwright build v1466) downloaded to C:\Users\hashour\AppData\Local\ms-playwright\firefox-1466
+Downloading Webkit 18.2 (playwright build v2104) from https://playwright.azureedge.net/builds/webkit/2104/webkit-win64.zip
+52.7 MiB [====================] 100% 0.0s
+Webkit 18.2 (playwright build v2104) downloaded to C:\Users\hashour\AppData\Local\ms-playwright\webkit-2104
+Downloading FFMPEG playwright build v1010 from https://playwright.azureedge.net/builds/ffmpeg/1010/ffmpeg-win64.zip
+1.3 MiB [====================] 100% 0.0s
+FFMPEG playwright build v1010 downloaded to C:\Users\hashour\AppData\Local\ms-playwright\ffmpeg-1010
+✔ Success! Created a Playwright Test project at H:\Hamada Personal\Cources\Automation Projects\Playwright
+
+Inside that directory, you can run several commands:
+
+  npx playwright test
+    Runs the end-to-end tests.
+
+  npx playwright test --ui
+    Starts the interactive UI mode.
+
+  npx playwright test --project=chromium
+    Runs the tests only on Desktop Chrome.
+
+  npx playwright test example
+    Runs the tests in a specific file.
+
+  npx playwright test --debug
+    Runs the tests in debug mode.
+
+  npx playwright codegen
+    Auto generate tests with Codegen.
+
+We suggest that you begin by typing:
+
+    npx playwright test
+
+And check out the following files:
+  - .\tests\example.spec.ts - Example end-to-end test
+  - .\tests-examples\demo-todo-app.spec.ts - Demo Todo App end-to-end tests
+  - .\playwright.config.ts - Playwright Test configuration
+
+Visit https://playwright.dev/docs/intro for more information. ✨
+
+Happy hacking! 🎭
+-------------------------------------------------------------------------------------------
+
+
+// to run tests in tests floder in by deafyalt headless mode
+>> npx playwright test
+>> npx playwright test --workers=2
+
+// to run tests in tests floder in by deafyalt unheadless mode
+npx playwright test --headed
+
+// to run specific test in tests floder
+>> npx playwright test tests/nameOfTest.spec.ts
+
+// to show test report
+>>npx playwright show-report
+
+//to use fake data
+npm install @faker-js/faker
+
+//install allure report
+npm install --save-dev @playwright/test allure-playwright
+or 
+npm install -D allure-playwright
++ npm install -g allure-commandline
+
+//generate allure report
+allure generate ./allure-results -o ./allure-report --clean 
+allure generate ./allure-results -o ./allure-report
+//open allure report
+ allure open ./allure-report
+
+//to run script in package.json ex     "APITests": "npx playwright test --grep @API"
+npm run APITests

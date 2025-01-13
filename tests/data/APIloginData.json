@@ -1,0 +1,16 @@
+{
+    "URL": "https://xxxxxxxxxxxxxxxxxxx.com/",
+    "loginRoot": "A/B/CCCCCCC",
+    "loginBody": {
+        "email": "xxxxxxxxxx@xxxxxxxxxx.com",
+        "password": "xxxxxxxxxx"
+    },
+    "loginEmail": "xxxxxxxx@xxxxxxxxxx.com",
+    "loginPassword": "xxxxxxxxxxx",
+    "getUserProfileRoot": "A/B/DDDDDDDD",
+    "getUserProfileBody": {},
+    "addNewItemRoot": "A/B/EEEEEEEEEE",
+    "addNewItemBody": {
+        "aa": "bb"
+    }
+}
